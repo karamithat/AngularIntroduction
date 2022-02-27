@@ -1,0 +1,19 @@
+<h1>{{title}}</h1>
+
+<p>{{content}}</p>
+
+<button (click)="clickMe()">Click Me</button>
+
+<input type="text" [value]="title" (input)="changeTitle($event)" />
+
+<p *ngIf="title.length > 8 then ifTemplate else elseTemplate">8 karakteri aştınız</p>
+
+<ng-template #ifTemplate>
+8 karakteri astiniz
+</ng-template>
+
+<ng-template #elseTemplate>
+  8 karakterden kucuk
+  </ng-template>
+
+

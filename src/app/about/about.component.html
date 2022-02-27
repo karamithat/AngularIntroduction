@@ -1,0 +1,24 @@
+<p>about works!</p>
+
+<ul>
+  <li *ngFor="let item of names">
+    {{item.name}} {{item.surname  | uppercase}}
+  </li>
+</ul>
+
+<!-- angular pipe -->
+
+<p>{{5454545 | number}}</p>
+
+<p>{{today | date:'dd MMMM yyyy hh:mm:s'}}</p>
+
+
+<select (change)="changeCity($event)">
+  <option *ngFor="let item of ['izmir','ankara','istanbul']">{{item}}</option>
+</select>
+
+<div [ngSwitch]="selectedCity">
+  <p *ngSwitchCase="'izmir'">Egenin incisi</p>
+  <p *ngSwitchCase="'istanbul'">Trnin kalbi</p>
+  <p *ngSwitchCase="'ankara'">Trnin baskenti</p>
+</div>
